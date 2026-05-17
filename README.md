@@ -65,7 +65,22 @@ It turns out that `ls folder1 folder2` can list and view the files inside two fo
 原来`ls 文件夹1 文件夹2`可以同时列表查看两个文件夹下的文件.
 
 
+- 2026-05-17: Practiced:Real-scenario practice replaces boring rote command memorization. I solve real production issues step by step: run codes, fix errors, rethink, adjust and make them work. Such hands-on practice brings quick understanding and long-lasting memory. Commands like ls -lh and rm -ir are deeply engraved in my mind, and this interactive mode feels just like chatting with Linux.
+
+
+- 2026-05-17: 练习了:模拟真实场景,打破了按照字典背诵命令的枯燥方式,而是把生产线上的实际需要问题让我来解决,我通过执行-报错-思考-校准-跑通,代入式的练习让我快速理解,记忆犹新.前面提到的所有命令,`ls -lh`,`rm -ir`的命令让我印象深刻,这种交互式的感觉,让我觉得能和linux对话.
+
+  
+**Troubleshooting Lab**:I can now understand the simple error messages from the previous command exercises and figure out the reasons behind them.
+**纠错实验室**:前面命令练习提到的简单报错,我能读懂了,并且我能思考为什么.
+
+**Growth Mindset**:Perhaps I have an extremely sharp sense of security, so I remember clearly the `-i` parameter used with the `rm` command. I compare `mkdir -p` to Russian nesting dolls, and I can make as many nested layers as I want, haha.
+I'm going to try using the Tab key to autocomplete commands.
+
+
 
 ### Permission & Security / 权限与安全
-- 2026-05-06: Learned that Linux permission model is like an onion
-- 2026-05-06: 理解了Linux权限的洋葱模型，一切皆文件的核心逻辑.
+- 2026-05-06: **Feynman Explanations**: Learned that Linux permission model is like an onion
+- 2026-05-06: **费曼式讲解**:理解了Linux权限的洋葱模型，一切皆文件的核心逻辑.
+
+
