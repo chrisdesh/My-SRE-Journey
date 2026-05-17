@@ -72,6 +72,7 @@ It turns out that `ls folder1 folder2` can list and view the files inside two fo
 
   
 **Troubleshooting Lab**:I can now understand the simple error messages from the previous command exercises and figure out the reasons behind them.
+
 **纠错实验室**:前面命令练习提到的简单报错,我能读懂了,并且我能思考为什么.
 
 **Growth Mindset**:Perhaps I have an extremely sharp sense of security, so I remember clearly the `-i` parameter used with the `rm` command. I compare `mkdir -p` to Russian nesting dolls, and I can make as many nested layers as I want, haha.
