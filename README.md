@@ -80,6 +80,15 @@ I'm going to try using the Tab key to autocomplete commands.
 
 
 
+- 2026-05-19: Practiced:`cat`, `tail -f`, `grep -color`,`head -n` ,`echo >>` commands
+- 2026-05-19: 练习了:cat`, `tail -f`, `grep -color`,`head -n` ,`echo >>` 命令.
+  
+**Growth Mindset**:I think the line break layout that the echo command uses for newly added content is very logical and fits common thinking habits.
+Perhaps I possess a stronger awareness of potential security risks than most people. I explicitly refuse to write commands and parameters in space-free shorthand. It is not only visually messy, but also highly prone to misjudgment once additional parameters are added.
+I use Tab to complete command parameters now; it’s super efficient.
+
+
+
 ### Permission & Security / 权限与安全
 - 2026-05-06: **Feynman Explanations**: Learned that Linux permission model is like an onion
 - 2026-05-06: **费曼式讲解**:理解了Linux权限的洋葱模型，一切皆文件的核心逻辑.
