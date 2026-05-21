@@ -88,6 +88,17 @@ Perhaps I possess a stronger awareness of potential security risks than most peo
 I use Tab to complete command parameters now; it’s super efficient.
 
 
+- 2026-05-21: Practiced: `tail -n`, `grep -color -E`,`head -n` ,`echo >>` `wc -l`commands
+- 2026-05-21: 练习了:`tail -n`, `grep -color -E`,`head -n` ,`echo >>` `wc -l`命令
+
+
+**Troubleshooting Lab**:
+1. When matching multiple keywords with grep, I used "&" instead of "|" and left out the "-E" parameter, leading to command failure.
+2. I did not use tail -n to set the data range before filtering keywords and counting lines with wc -l. Lacking valid conditions confused the Linux system and stopped the execution.
+**纠错实验室**:1.我在grep命令同时显示多个关键字时,使用了"&'而不是"|",我漏掉了"-E"参数,导致命令失败.2.我在grep命令显示多个关键字,并wc -l统计的时候,没有首先tail -n列出范围,导致系统肯定无法识别.等于没给条件,却让linux手足无措.
+
+
+**Growth Mindset**:Mistakes teach more than being right. Correctness feels good, but mistakes make you reflect. Today, typos and wrong spaces taught me pipe rules and wc tricks—these lessons stick better than one success.Tail sets the range, grep points out the focus, and wc counts them.Long pipeline commands with tail, grep, and wc caused many errors. Instead of using them to "show off" or making them too long— which makes troubleshooting overwhelming—simplify into short, single-step commands. This way, when checking for mistakes, you can focus more clearly and specifically on each error.Staring at the terminal, I compared commands and gradually realized where I went wrong.
 
 ### Permission & Security / 权限与安全
 - 2026-05-06: **Feynman Explanations**: Learned that Linux permission model is like an onion
