@@ -100,8 +100,21 @@ I use Tab to complete command parameters now; it’s super efficient.
 
 **Growth Mindset**:Mistakes teach more than being right. Correctness feels good, but mistakes make you reflect. Today, typos and wrong spaces taught me pipe rules and wc tricks—these lessons stick better than one success.Tail sets the range, grep points out the focus, and wc counts them.Long pipeline commands with tail, grep, and wc caused many errors. Instead of using them to "show off" or making them too long— which makes troubleshooting overwhelming—simplify into short, single-step commands. This way, when checking for mistakes, you can focus more clearly and specifically on each error.Staring at the terminal, I compared commands and gradually realized where I went wrong.
 
+
+
+- 2026-05-24: Reviewed: `tail -n`, `grep -color -E`,`echo >>` commands
+- 2026-05-24: 复习了:`tail -n`, `grep -color -E`,`echo >>` 命令
+
+**Troubleshooting Lab**:When using the -E parameter of the grep command, the correct format is "A|B", while I wrote "A" | "B" by mistake.Today I managed to link tail and grep via pipe operator, and ran the combined command accurately.
+**纠错实验室**:grep 用 - E 做多关键词或匹配时，所有关键词和分隔符.grep用-E参数,应该是"A|B",而我写成"A" | "B",
+
+
+
 ### Permission & Security / 权限与安全
-- 2026-05-06: **Feynman Explanations**: Learned that Linux permission model is like an onion
-- 2026-05-06: **费曼式讲解**:理解了Linux权限的洋葱模型，一切皆文件的核心逻辑.
+- 2026-05-06:
+- **Feynman Explanations**: Learned that Linux permission model is like an onion.Linux system is like a big house.
+The Desktop is just like the surface of my office desk.Documents serve as boxes for storing office files.
+Pictures are similar to a photo wall.Downloads acts as a mailbox at home to receive letters and packages.
+-**费曼式讲解**:理解了Linux权限的洋葱模型，一切皆文件的核心逻辑.Linux系统就像一栋大房子，Desktop如同办公桌台面，Documents是存放办公资料的文件盒，Pictures好比照片墙，Downloads则相当于家里的信箱，用来接收信件和各类快递文件。
 
 
