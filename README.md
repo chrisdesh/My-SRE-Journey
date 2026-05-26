@@ -106,13 +106,15 @@ I use Tab to complete command parameters now; it’s super efficient.
 - 2026-05-24: 复习了:`tail -n`, `grep -color -E`,`echo >>` 命令
 
 **Troubleshooting Lab**:When using the -E parameter of the grep command, the correct format is "A|B", while I wrote "A" | "B" by mistake.Today I managed to link tail and grep via pipe operator, and ran the combined command accurately.
+
 **纠错实验室**:grep 用 - E 做多关键词或匹配时，所有关键词和分隔符.grep用-E参数,应该是"A|B",而我写成"A" | "B",
 
 
+- 2026-05-26: 
 ### 📝 [Incident Response Log] IR-202605: Auth Service Alert Audit
 
 **[Action / 运维行动]**
-响应节点认证服务异常告警，对模拟的 `auth.log` 进行安全审计，提取并统计恶意登录（Failed）的攻击记录。
+模拟响应节点认证服务异常告警，对模拟的 `auth.log` 进行安全审计，提取并统计恶意登录（Failed）的攻击记录。
 
 **[Symptom & Valuable Pitfall / 现场症状与价值坑点]**
 1. 盲目对大日志文件执行 `cat` 会导致终端无关信息刷屏，无法快速锁定攻击源，在生产环境中更是性能杀手。
