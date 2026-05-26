@@ -109,6 +109,28 @@ I use Tab to complete command parameters now; it’s super efficient.
 **纠错实验室**:grep 用 - E 做多关键词或匹配时，所有关键词和分隔符.grep用-E参数,应该是"A|B",而我写成"A" | "B",
 
 
+### 📝 [Incident Response Log] IR-202605: Auth Service Alert Audit
+
+**[Action / 运维行动]**
+响应节点认证服务异常告警，对模拟的 `auth.log` 进行安全审计，提取并统计恶意登录（Failed）的攻击记录。
+
+**[Symptom & Valuable Pitfall / 现场症状与价值坑点]**
+1. 盲目对大日志文件执行 `cat` 会导致终端无关信息刷屏，无法快速锁定攻击源，在生产环境中更是性能杀手。
+2. 在将过滤结果重定向到报告时，必须高度警惕 `>`（清空覆盖）与 `>>`（末尾追加）的底层差异。误用 `>` 会导致历史审计数据被意外抹除，这是极为严重的运维事故。
+
+**[The Feynman Aha! / 费曼顿悟]**
+Linux 运维的精髓是“把数据当成自来水，把命令当成阀门”。
+面对成千上万条认证失败记录，合格的 SRE 绝不手动复制，而是构建自动化管道：用 `cat` 倾倒原始数据，用 `grep "Failed"` 像筛子一样截留攻击痕迹，最后用 `>` 或 `>>` 将纯净的证据注入审计报告。从混乱的日志到结构化的报告，中间全靠数据流（Data Stream）的精准控制。
+
+**[The Fix / 最终修复与大厂规范]**
+拒绝盲目全量读取，先预览、后过滤、再归档：
+# 1. 局部预览最新 50 行，确认错误特征
+tail -n 50 auth.log
+
+# 2. 构建精准过滤管道，将认证失败与非法用户记录自动归档至审计报告
+cat auth.log | grep --color -E "Failed|Invalid" > incident_audit_report.txt
+
+
 
 ### Permission & Security / 权限与安全
 - 2026-05-06:
