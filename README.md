@@ -284,7 +284,7 @@ My-SRE-Journey/ (根目录)
 
 ### 💡 费幕式开悟 (The Feynman Aha!)
 *   **English:** The essence of Linux operations is 'treat data as tap water, and commands as valves'. Faced with thousands of authentication failure logs, a qualified SRE never manually copies them, but builds an automated pipeline: use `cat` to pour raw data, use `grep 'Failed'` as a sieve to intercept attack traces, and finally use `>` or `>>` to inject pure evidence into an audit report. Transforming chaotic logs into a structured report relies entirely on the precise control of the Data Stream.
-*   **中文：** Linux 运维的精髓是“把数据当成自来水，把命令当成阀门”。面对成千上万条认证失败记录，合格的 SRE 绝不手动复制，而是构建自动化管道：用 `cat` 倾倒原始数据，用 `grep "Failed"` 像筛子一样截留攻击痕迹，最后用 `>` 或 `>>` 将纯净的证据注入审计报告。从混乱的日志到结构化的报告，中间全靠数据流（Data Stream）的精准控制。
+*   **中文：** Linux 运维的精髓是“把数据当成自来水，把命令当成阀门”。面对成千上万条认证失败记录，合格的 SRE 绝不手动复制(手动敲导致我敲错)，先用 `grep "Failed"` 像筛子一样截筛除关键字，最后用 `>` 或 `>>` 将需要的文本内容导出形成报告。这才是从混乱到结构化的报告，中间全靠数据流（Data Stream）的精准控制。然后用wc -l统计一下.哈哈.
 
 ### 🛡️ 最终修复与大厂规范 (The Fix)
 *   **English:** Refuse blind full-scale reading; preview first, filter later, archive last:
@@ -293,9 +293,9 @@ My-SRE-Journey/ (根目录)
     2. Build a precise filtering pipeline to archive authentication failures and invalid user records to the audit report:
        `cat auth.log | grep --color -E "Failed|Invalid" > incident_audit_report.txt
 *   **中文：** 拒绝盲目全量读取，先预览、后过滤、再归档：
-    1. 局部预览最新 50 行，确认错误特征：
+    1. 局部预览最新 50 行，目的是划定范围,确认错误特征：
        `tail -n 50 auth.log`
-    2. 构建精准过滤管道，将认证失败与非法用户记录自动归档至审计报告：
+    2. 构建精准过滤管道，将认证失败与非法用户记录自动归档至审计报告(我已经领悟到"|"的使用方法了)：
        `cat auth.log | grep --color -E "Failed|Invalid" > incident_audit_report.txt`
 
 </details>
